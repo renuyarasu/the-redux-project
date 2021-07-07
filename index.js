@@ -1,5 +1,5 @@
 const { createStore } = require("redux")
-
+const BUY_LAPTOP = 'BUY_LAPTOP';
 // Create "initial state"
 const initialState = {
     numOflaptops: 100
@@ -8,7 +8,7 @@ const initialState = {
 // displatch Action
 const buyLaptop = () => {
     return {
-        type: 'BUY_LAPTOP'
+        type: BUY_LAPTOP
     }
 }
 
@@ -16,7 +16,7 @@ const buyLaptop = () => {
 const reducer = (state = initialState, action) => {
     // Switch Statement
     switch (action.type) {
-        case 'BUY_LAPTOP':
+        case BUY_LAPTOP:
             return { numOflaptops: state.numOflaptops - 1 }
         default:
             return state;
